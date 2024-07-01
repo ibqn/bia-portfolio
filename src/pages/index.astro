@@ -1,17 +1,11 @@
 ---
 import Counter from "@/components/vue/counter.vue"
+import BaseLayout from "@/layouts/base-layout.astro"
+import { Counter as ReactCounter } from "@/components/react/counter"
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <h1 class="text-cyan-600">Astro</h1>
-    <Counter client:visible />
-  </body>
-</html>
+<BaseLayout title="Home">
+  <h1 class="bg-cyan-600">Home</h1>
+  <Counter client:visible />
+  <ReactCounter client:visible />
+</BaseLayout>
