@@ -5,7 +5,9 @@ import { Counter as ReactCounter } from "@/components/react/counter"
 ---
 
 <BaseLayout title="Home">
-  <h1 class="bg-cyan-600">Home</h1>
-  <Counter client:visible />
-  <ReactCounter client:visible />
+  <main class="bg-sky-100 flex-1">
+    <h1>Home</h1>
+    <Counter client:visible />
+    <ReactCounter client:visible />
+  </main>
 </BaseLayout>
